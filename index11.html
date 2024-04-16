@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Write a js program to count a minimum number of notes in a given amount</h2>
+    <script>
+        let amount = parseFloat(prompt("Enter your Amount"));
+        let notes = [5000, 1000, 500, 100, 50, 20, 10, 5, 2, 1]
+        let noteCount = {};
+
+        if (amount === 0) {
+            console.log("Notes is zero");
+            alert("Notes is zero")
+        } else {
+            for (let i = 0; i < notes.length; i++) {
+                let denomination = notes[i];
+                let count = Math.floor(amount / denomination);
+                if (count > 0) {
+                    noteCount[denomination] = count;
+                    amount %= denomination;
+                }
+            }
+
+            console.log("Minimum number of notes:");
+            for (let note in noteCount) {
+                console.log(note + " : " + noteCount[note]);
+                alert(note + " : " + noteCount[note])
+            }
+        }
+    </script>
+</body>
+
+</html>

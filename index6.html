@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>
+        6. Write a js program to check whether a year is leap year or not.
+
+    </h3>
+    <script>
+
+        let num = prompt("Enter year to check Leap year or not")
+        if (num % 4 === 0) {
+
+            console.log("This is a leap year");
+            alert("This is a leap year")
+
+        }
+
+        else if ((num % 100 === 0 && num % 400 === 0)) {
+            console.log("This is a leap year");
+            alert("This is a leap year")
+
+        }
+
+        else {
+            console.log("This is not a leap year");
+            alert("This is not a leap year")
+        }
+
+
+    </script>
+
+</body>
+
+</html>

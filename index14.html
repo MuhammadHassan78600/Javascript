@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>
+        14. Write a js program to input electricity unit charges and calculate total
+        electricity bill according to the given condition:
+    </h3>
+    <h5>
+        For the first 50 units Rs. 0.50/unit
+        For the next 100 units Rs. 0.75/unit
+        For the next 100 units Rs. 1.20/unit
+        For units above 250 Rs. 1.50/unit
+        An additional surcharge of 20% is added to the bill
+    </h5>
+    <script>
+        let unit = parseFloat(prompt("Enter your unit"));
+
+        if (unit >= 0 && unit <= 50)
+        
+        {
+            console.log(unit * 0.50 + 0.2);
+            alert(`Total amount ${unit * 0.50 + 0.2}`)
+
+        }
+
+        else if (unit >= 50 && unit <= 100)
+        
+        {
+            console.log(unit * 0.75 + 0.2);
+            alert(`Total amount ${unit * 0.75 + 0.2}`)
+        }
+
+        else if (unit >= 100 && unit <= 250)
+        
+        {
+            console.log(unit * 1.20 + 0.2);
+            alert(`Total amount ${unit * 1.20 + 0.2}`)
+        }
+
+        else (unit > 250)
+
+        {
+            console.log(unit * 1.50 + 0.2);
+            alert(`Total amount ${unit * 1.50 + 0.2}`)
+        }
+
+
+    </script>
+</body>
+
+</html>
